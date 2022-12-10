@@ -1,9 +1,11 @@
 import 'package:activities/bloc/home_bloc.dart';
 import 'package:activities/services/boredService.dart';
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../services/boredService_api.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);

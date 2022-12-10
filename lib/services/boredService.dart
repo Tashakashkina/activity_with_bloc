@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:http/http.dart';
 
 BoredActivity boredActivityFromJson(String str) => BoredActivity.fromJson(json.decode(str));
 
@@ -33,6 +32,7 @@ class BoredActivity {
         link: json["link"],
         key: json["key"],
         accessibility: json["accessibility"].toDouble(),
+        
     );
 
     Map<String, dynamic> toJson() => {
@@ -43,13 +43,9 @@ class BoredActivity {
         "link": link,
         "key": key,
         "accessibility": accessibility,
+        
     };
 }
 
-class BoredService {
-  Future<BoredActivity> getBoredActivity() async {
-    final response = await get(Uri.parse('https://www.boredapi.com/api/activity'));
-    final activity = boredActivityFromJson(response.body);
-    return activity;
-  }
-}
+
+
